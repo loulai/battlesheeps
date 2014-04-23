@@ -79,7 +79,7 @@ describe "farm" do
 		it "a lamb can be created" do
 			expect(farm.grid[:J1]).to eq " "
 			expect(farm.grid[:J2]).to eq " "
-			farm.place_lamb(:J1, :J2, "s")
+			farm.place_lamb([:J1, :J2], "s")
 			expect(farm.grid[:J1]).to eq "s"
 			expect(farm.grid[:J2]).to eq "s"
 		end

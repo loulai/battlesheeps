@@ -43,14 +43,37 @@ class Board
 		grid[at_coordinates.to_sym] = "s"
 	end
 
-	def place_lamb(coord1, coord2, default_value)
-		place_lamb_chop(coord1)
-		place_lamb_chop(coord2)
-		# coords.each {|coord| place_lamb_chop(coord) }
-		# grid[origin_coordinates.product([default_value])]
+	def place_lamb(coord, forced_change)
+
+		coord.each { |each_coord| grid[each_coord.to_sym] = "#{forced_change}" }
+
+		# grid[coord1.to_sym] = "s"
+		# grid[coord2.to_sym] = "s"
 	end
+
+
 	
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
