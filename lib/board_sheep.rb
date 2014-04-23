@@ -13,9 +13,7 @@ class Board
 			J1: " ", J2: " ", J3: " ", J4: " ", J5: " ", J6: " ", J7: " ", J8: " ", J9: " ", J10: " ",
 		}	
 
-
-
-	def initialize(farmer_name = "Some name", farm = EMPTY_BOARD)
+	def initialize(farmer_name = "Some_name", farm = EMPTY_BOARD)
 		@name = farmer_name
 		@farm = farm
 	end
@@ -26,5 +24,9 @@ class Board
 
 	def grid
 		@farm
+	end
+
+	def register_shot at_coordinates
+		grid[at_coordinates.to_sym] == "s.+-------------------------" ? grid[at_coordinates.to_sym] = "x" : grid[at_coordinates.to_sym] = "o"
 	end
 end

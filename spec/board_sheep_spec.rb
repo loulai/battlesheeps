@@ -29,12 +29,29 @@ describe "farm" do
 		end
 	end
 
-	context "can access coordinates" do
+	context "accessing coordinates" do
 		it "knows what is in every square" do
 			expect(farm.grid[:A1]).to eq "s"
 			expect(farm.grid[:D3]).to eq "x"
 			expect(farm.grid[:G5]).to eq "o"
 		end
+
+		it "can register shots at sheeps" do
+			# farm.grid[:A1] = "x"
+			expect(farm.grid[:A1]).to eq "s"
+			farm.register_shot("A1")
+			expect(farm.grid[:A1]).to eq "x"
+		end
+
+		it "can register shots at grass" do
+			expect(farm.grid[:H1]).to eq " "
+			farm.register_shot("H1")
+			expect(farm.grid[:H1]).to eq "o"
+		end
+
+		
+
+
 	end
 
 	# context " populating with sheeps" do
