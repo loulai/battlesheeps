@@ -37,7 +37,6 @@ describe "farm" do
 		end
 
 		it "can register shots at sheeps" do
-			# farm.grid[:A1] = "x"
 			expect(farm.grid[:A1]).to eq "s"
 			farm.register_shot("A1")
 			expect(farm.grid[:A1]).to eq "x"
@@ -49,9 +48,12 @@ describe "farm" do
 			expect(farm.grid[:H1]).to eq "o"
 		end
 
+	context "returning an array for the server" do
+		it "has ten arrays" do
+			expect(farm.rows.class).to eq "Array"
+		end 
 
-
-
+	end
 	end
 
 	# context " populating with sheeps" do

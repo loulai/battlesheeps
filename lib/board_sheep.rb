@@ -29,4 +29,54 @@ class Board
 	def register_shot(at_coordinates)
 		grid[at_coordinates.to_sym] == "s" ? grid[at_coordinates.to_sym] = "x" : grid[at_coordinates.to_sym] = "o"
 	end
+
+	def rows
+		
+	end
+
+	
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
