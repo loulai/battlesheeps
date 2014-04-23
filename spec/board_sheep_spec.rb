@@ -49,12 +49,17 @@ describe "farm" do
 		end
 
 	context "returning an array for the server" do
-		it "has ten arrays" do
-			expect(farm.rows.class).to eq "Array"
-		end 
+
+	  	it 'the grid should have 10 rows' do
+	  		expect(farm.rows.count).to eq 10
+  		end
+
+  		it 'each row should have 10 cells' do
+    		expect(farm.rows.all? { |one_row| one_row.count == 10 }).to be_true
+  		end
 
 	end
-	end
+end
 
 	# context " populating with sheeps" do
 	# 	it "a chicken can be added" do

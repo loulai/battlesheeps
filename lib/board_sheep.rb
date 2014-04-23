@@ -30,12 +30,17 @@ class Board
 		grid[at_coordinates.to_sym] == "s" ? grid[at_coordinates.to_sym] = "x" : grid[at_coordinates.to_sym] = "o"
 	end
 
+	# def rows
+	# 	grid.values.each_slice(10) {|a| p a}
+	# end
 	def rows
-		
+		organized_board = []
+		grid.values.each_slice(10) {|a| organized_board << a}
+		organized_board
 	end
-
 	
 end
+
 
 
 
