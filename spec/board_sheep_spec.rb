@@ -19,6 +19,7 @@ describe "farm" do
 	let (:farm) {Board.new("Farmer John", BOARD)}
 
 	context "when created" do
+
 		it "belongs to a farmer" do
 			expect(farm.owner).to eq "Farmer John"
 		end
@@ -27,9 +28,11 @@ describe "farm" do
 			farm = Board.new
 			expect(farm.grid.values).to eq Array.new(100) { " " }
 		end
+
 	end
 
 	context "accessing coordinates" do
+
 		it "knows what is in every square" do
 			expect(farm.grid[:A1]).to eq "s"
 			expect(farm.grid[:D3]).to eq "x"
@@ -60,7 +63,7 @@ describe "farm" do
 
 	end
 
-	context " populating with sheeps" do
+	context "populating with sheeps" do
 		
 		it "a lamb chop can be created" do
 			expect(farm.grid[:A10]).to eq " "
@@ -76,12 +79,16 @@ describe "farm" do
 		# 	expect(farm.grid[:J2]).to eq "s"
 		# end
 
-		it "a lamb can be created" do
+		it "a sheep can be created" do
 			expect(farm.grid[:J1]).to eq " "
 			expect(farm.grid[:J2]).to eq " "
 			farm.place_lamb([:J1, :J2], "s")
 			expect(farm.grid[:J1]).to eq "s"
 			expect(farm.grid[:J2]).to eq "s"
+		end
+
+		it "sheeps cannot be stacked on sheeps" do
+			expect(farm.can_place?([:A1, :A2, :A3, :A4], "s")).to be_false
 		end
 
 
