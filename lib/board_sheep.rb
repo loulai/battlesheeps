@@ -26,7 +26,7 @@ class Board
 		@farm
 	end
 
-	def register_shot at_coordinates
-		grid[at_coordinates.to_sym] == "s.+-------------------------" ? grid[at_coordinates.to_sym] = "x" : grid[at_coordinates.to_sym] = "o"
+	def register_shot(at_coordinates)
+		grid[at_coordinates.to_sym] == "s" ? grid[at_coordinates.to_sym] = "x" : grid[at_coordinates.to_sym] = "o"
 	end
 end

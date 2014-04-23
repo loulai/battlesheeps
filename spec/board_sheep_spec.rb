@@ -49,7 +49,7 @@ describe "farm" do
 			expect(farm.grid[:H1]).to eq "o"
 		end
 
-		
+
 
 
 	end
