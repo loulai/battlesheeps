@@ -38,6 +38,17 @@ class Board
 		grid.values.each_slice(10) {|a| organized_board << a}
 		organized_board
 	end
+
+	def place_lamb_chop at_coordinates
+		grid[at_coordinates.to_sym] = "s"
+	end
+
+	def place_lamb(coord1, coord2, default_value)
+		place_lamb_chop(coord1)
+		place_lamb_chop(coord2)
+		# coords.each {|coord| place_lamb_chop(coord) }
+		# grid[origin_coordinates.product([default_value])]
+	end
 	
 end
 

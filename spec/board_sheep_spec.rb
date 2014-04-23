@@ -59,13 +59,40 @@ describe "farm" do
   		end
 
 	end
+
+	context " populating with sheeps" do
+		
+		it "a lamb chop can be created" do
+			expect(farm.grid[:A10]).to eq " "
+			farm.place_lamb_chop("A10")
+			expect(farm.grid[:A10]).to eq "s"
+		end
+
+		# it "a lamb can be created" do
+		# 	expect(farm.grid[:J1]).to eq " "
+		# 	expect(farm.grid[:J2]).to eq " "
+		# 	farm.place_lamb("J1")
+		# 	expect(farm.grid[:J1]).to eq "s"
+		# 	expect(farm.grid[:J2]).to eq "s"
+		# end
+
+		it "a lamb can be created" do
+			expect(farm.grid[:J1]).to eq " "
+			expect(farm.grid[:J2]).to eq " "
+			farm.place_lamb(:J1, :J2, "s")
+			expect(farm.grid[:J1]).to eq "s"
+			expect(farm.grid[:J2]).to eq "s"
+		end
+
+
+
+
+	end
+
+
 end
 
-	# context " populating with sheeps" do
-	# 	it "a chicken can be added" do
-			
-	# 	end
-	# end
+	
 
 end
 
