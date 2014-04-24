@@ -47,8 +47,8 @@ class Board
 		coords.each { |each_coord| grid[each_coord.to_sym] = "#{forced_change}" }
 	end
 
-	def can_place?(sheep_coord)
-		
+	def can_place?(wannabe_sheep_coords)
+		self.rows
 	end
 
 
