@@ -48,7 +48,9 @@ class Board
 	end
 
 	def can_place?(wannabe_sheep_coords)
-		self.rows
+		wannabe_sheep_coords.all? {|lamb_chop| grid[lamb_chop.to_sym] != "s"}
+		#wannabe_sheep_coords.all? {|coord| grid[coord] != "s"}
+
 	end
 
 
