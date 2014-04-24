@@ -88,7 +88,7 @@ describe "farm" do
 		end
 
 		it "sheeps cannot be stacked on sheeps" do
-			expect(farm.can_place?([:A1, :A2, :A3, :A4], "s")).to be_false
+			expect(farm.can_place?([:A1, :A2, :A3, :A4])).to be_false
 		end
 
 
