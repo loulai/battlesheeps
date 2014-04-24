@@ -49,7 +49,7 @@ class Board
 
 	def can_place?(wannabe_sheep_coords)
 		wannabe_sheep_coords.all? {|lamb_chop| grid[lamb_chop.to_sym] != "s"}
-		#wannabe_sheep_coords.all? {|coord| grid[coord] != "s"}
+		#wannabe_sheep_coords.all? {|coord| grid[coord] != "s"}git
 
 	end
 
